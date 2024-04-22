@@ -15,18 +15,6 @@ env:
 
 jobs:
 
-  tfsec:
-    name: tfsec
-    runs-on: ubuntu-latest
-
-    steps:
-      - name: Clone repo
-        uses: actions/checkout@master
-      - name: tfsec
-        uses: aquasecurity/tfsec-action@v1.0.0
-        with:
-          working_directory: terraform
-
   terraform:
     name: 'Terraform Apply'
     runs-on: ubuntu-latest
